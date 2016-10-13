@@ -1,4 +1,4 @@
-import hashlib, httplib, re, urllib
+import hashlib, httplib, os, re, urllib
 
 if __name__ == '__main__':
     md5 = dict()
@@ -19,3 +19,4 @@ if __name__ == '__main__':
     imgmd5 = hashlib.md5(imgfile.read()).hexdigest()
     imgfile.close()
     print md5[imgmd5]
+    os.remove('temp.png')
